@@ -1,0 +1,217 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+   padding: 0%;
+   margin: 0%;
+   list-style: none;
+   text-decoration: none;
+   box-sizing: border-box;
+   font-family: 'Montserrat', sans-serif;}
+
+ html{
+    scroll-behavior: smooth;
+}
+a{
+    color: black;
+}
+.container-header{
+    position: sticky;
+    top: 0%;
+    z-index: 9999;
+    background-color: white;
+    box-shadow: 0px 1px 10px 1px black;
+ }
+ .ul-hambur>a{
+    color: black;
+ }
+ .ul-hambur>li>a{
+    color: black;
+ }
+ 
+ .ul-hambur>li>a:hover{
+    text-decoration: underline;
+ }
+ 
+ header{
+       margin: 0 auto;
+       max-width: 1300px;
+       height: 200px;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       padding: 0px 80px 0px 50px;
+       color: black;
+
+ }
+ ul>.linea{
+     display: none;
+ }
+ .ul-hambur{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    gap: 20px;
+    
+ }
+ .logo{
+    font-size: 30px;
+ }
+ nav{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+ }
+ 
+ #menu-hamb, nav>label{
+    display: none;
+ }
+ label>img{
+    width: 40px;
+    height: 40px;
+ }
+
+ @media (max-width:992px){ 
+ 
+    
+    header{
+       padding: 0px 50px 0px 10px;
+    }
+ 
+    label{
+       display: flex;
+       cursor: pointer;
+    }
+    
+    .fa-solid{
+       font-size: 30px;
+    }
+    ul>.linea{
+
+    }
+    .ul-hambur{
+    position: absolute;
+     background-color: white;
+     flex-direction: column;
+     top: 60px;
+     right: -50px;
+     width:100vw;
+     height: calc(100vh - 55px);
+     z-index: 5;
+     display: none;
+     border: black solid 1px;
+     gap: 40px;
+    }
+ 
+    .burguer-linea{
+       width: 300px;
+       height: 1px;
+       background-color: white;
+    }
+ 
+    input:checked + ul{
+       display: flex;
+    }
+ }
+ 
+header{
+width: 100%;
+max-width: 1600px;
+height: 100%;
+}
+.background{
+   width: 100%;
+   height: calc(100vh - 55px);
+
+}
+.container-login{
+   width: 100%;
+   height: calc(95vh - 55px);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: row;
+}
+
+
+/* ------------------------------------------- */
+
+h1{
+   font-size: 60px;
+   font-weight: 700;
+}
+.login{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+form{
+   height: 90%;
+   width: 70%;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   flex-direction: column;
+   background-color: #84afa4;
+   border-radius: 20px;
+}
+.a{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+}
+.a>label{
+   font-size: 22px;
+   font-weight: 500;
+}
+button{
+   border: none;
+   background-color: transparent;
+   font-size: 15px;
+   padding: 3px;
+}
+.a>input:active{
+   border-width: 0px 0px 3px;
+   outline: 0%;
+}
+button:first-child{
+   background-color: #024b3b;
+   border-radius: 20px;
+   color: white;
+   width: 60%;
+   height: 60px;
+   font-size: 25px;
+   font-weight: 500;
+   margin-bottom: 10px;
+}
+button:first-child:active{
+   background-color: black;
+}
+
+
+.a>input{
+   background-color: transparent;
+   border-width: 0px 0px 3px;
+   width: 60%;
+   height: 40px;
+   padding: 10px;
+   font-size: 18px;
+}
+
+.img{
+
+   background-image: url("assets/login-banner-3.webp");
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   width: 50%;
+   height: 100%;
+}
+
