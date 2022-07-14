@@ -232,9 +232,18 @@ button:first-child:active{
 
    }
    form{
-      width: 100%;
-      height: 100%;
-      border-radius: 0%;
+      width: 90%;
+      height: 90%;
+      border-radius: 30px;
+      background-color: transparent;
+      border-radius: 30px;
+      position: relative;
+      z-index: 5;
+   }
+   .container-login{
+      background-image: url("assets/menu.jpg");
+      background-position: center;
+      background-size: cover;
    }
    .img{
       display: none;
@@ -242,3 +251,15 @@ button:first-child:active{
    
 }
 
+.opacity{
+   position: absolute;
+   top: 0%;
+   right: 0%;
+   left: 0%;
+   bottom: 0%;
+   z-index: -1;
+   opacity: 80%;
+   display: flex;
+   background-color: white;
+   border-radius: 30px;
+}
