@@ -17,7 +17,7 @@ a{
 .container-header{
     position: sticky;
     top: 0%;
-    z-index: 9999;
+    z-index: 9999999;
     background-color: white;
     box-shadow: 0px 1px 10px 1px black;
  }
@@ -43,9 +43,7 @@ a{
        color: black;
 
  }
- ul>.linea{
-     display: none;
- }
+
  .ul-hambur{
     display: flex;
     justify-content: center;
@@ -65,55 +63,63 @@ a{
  
  }
  
- #menu-hamb, nav>label{
+ #menu-hamb, label{
     display: none;
  }
  label>img{
     width: 40px;
     height: 40px;
  }
+ span.linea{
+   display: none;
+}
 
  @media (max-width:992px){ 
  
-    
-    header{
-       padding: 0px 50px 0px 10px;
-    }
+   header{
+      border-bottom: black solid 2px;
+  }
  
-    label{
-       display: flex;
-       cursor: pointer;
-    }
-    
-    .fa-solid{
-       font-size: 30px;
-    }
-    ul>.linea{
+  header{
+     padding: 0px 50px 0px 10px;
+  }
 
-    }
-    .ul-hambur{
-    position: absolute;
+  label{
+     display: flex;
+     cursor: pointer;
+  }
+  
+  .fa-solid{
+     font-size: 30px;
+  }
+  span.linea{
+      width: 100px;
+      height: 1px;
+      background-color: black;
+      display: flex;
+  }
+  .ul-hambur{
+  position: absolute;
+   background-color: white;
+   flex-direction: column;
+   top: 40px;
+   right: -50px;
+   width:100vw;
+   height: calc(100vh - 40px);
+   z-index: 5;
+   display: none;
+   gap: 40px;
+  }
+
+  .burguer-linea{
+     width: 300px;
+     height: 1px;
      background-color: white;
-     flex-direction: column;
-     top: 60px;
-     right: -50px;
-     width:100vw;
-     height: calc(100vh - 55px);
-     z-index: 5;
-     display: none;
-     border: black solid 1px;
-     gap: 40px;
-    }
- 
-    .burguer-linea{
-       width: 300px;
-       height: 1px;
-       background-color: white;
-    }
- 
-    input:checked + ul{
-       display: flex;
-    }
+  }
+
+  input:checked + ul{
+     display: flex;
+  }
  }
  
 header{
@@ -121,6 +127,7 @@ width: 100%;
 max-width: 1600px;
 height: 100%;
 }
+
 .background{
    width: 100%;
    height: calc(100vh - 55px);
@@ -139,7 +146,7 @@ height: 100%;
 /* ------------------------------------------- */
 
 h1{
-   font-size: 60px;
+   font-size: max(3.5vw, 25px);
    font-weight: 700;
 }
 .login{
@@ -168,7 +175,7 @@ form{
    width: 100%;
 }
 .a>label{
-   font-size: 22px;
+   font-size: max(2vw, 18px);
    font-weight: 500;
 }
 button{
@@ -187,7 +194,7 @@ button:first-child{
    color: white;
    width: 60%;
    height: 60px;
-   font-size: 25px;
+   font-size: max(2vw, 15px);
    font-weight: 500;
    margin-bottom: 10px;
 }
@@ -213,5 +220,25 @@ button:first-child:active{
    background-repeat: no-repeat;
    width: 50%;
    height: 100%;
+}
+
+@media screen and (max-width:1300px) {
+   .container-login{
+      height: calc(100vh - 55px);
+   }
+   .login{
+      width: 100%;
+      height: 100%;
+
+   }
+   form{
+      width: 100%;
+      height: 100%;
+      border-radius: 0%;
+   }
+   .img{
+      display: none;
+   }
+   
 }
 
