@@ -243,12 +243,14 @@ button:active {
 	text-align: center;
 }
 .text-hero > button {
+	max-width: 20vw;
 	width: 100px;
-	height: 40px;
+	max-height: 40px;
+	min-height: 25px;
+	height: 5vh;
 	border-radius: 15px;
 	border: 1px solid black;
-	font-size: 15px;
-	margin-right: 30px;
+	font-size: min(15px, 3vw);
 	background-color: white;
 }
 .text-hero > h2 {
@@ -265,19 +267,27 @@ button:active {
 		padding: 40px;
 	}
 }
+/* @media (max-height: 500px) {
+	.text-hero > p {
+		font-size: 3vh;
+	}
+} */
+
 /* ----------------------CARDS--------------------------- */
 
 .productos {
 	width: 100%;
-	height: 70vh;
+	height: auto;
+	min-height: 80vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	gap: 20px;
+	gap: 30px;
 }
 .productos > h2 {
-	font-size: 45px;
+	margin-top: 20px;
+	font-size: min(4vw, 45px);
 	text-align: center;
 }
 .card-container {
@@ -290,6 +300,7 @@ button:active {
 .card {
 	width: 20vw;
 	height: 20vw;
+	max-height: 50vh;
 	border-radius: 4px;
 	background-size: cover;
 	background-position: center;
@@ -342,7 +353,6 @@ button:active {
 @media (max-width: 600px) {
 	.productos > h2 {
 		padding: 20px;
-		font-size: 35px;
 	}
 	.card-container {
 		flex-direction: column;
@@ -392,7 +402,10 @@ footer {
 
 #form {
 	position: relative;
-	width: 470px;
+	width: 80%;
+	max-width: 400px;
+	height: 300px;
+	max-height: 90%;
 }
 
 input {
@@ -468,12 +481,14 @@ textarea:hover {
 	width: 80%;
 	max-width: 400px;
 	height: 300px;
+	max-height: 90%;
 }
 .gmap_canvas {
 	overflow: hidden;
 	background: none;
 	width: 100%;
 	height: 300px;
+	max-height: 90%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
